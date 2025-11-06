@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QA Test</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <h1 id="case-counter">Case 1</h1>
+  <div class="swagger-link">
+    <a href="/api-docs" target="_blank">API Documentation (Swagger)</a>
+  </div>
+  <div class="container">
+    <div class="form-container">
+      <h2>Регистрация</h2>
+      <form id="register-form">
+        <div class="input-container">
+          <i class="fas fa-user"></i>
+          <input type="text" id="name" placeholder="Name" required>
+        </div>
+        <div class="input-container">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="input-container">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+    <div class="bug-report-container">
+      <h2>Краткое описание бага</h2>
+      <select id="bug-type">
+        <option value="frontend">Frontend Bug</option>
+        <option value="backend">Backend Bug</option>
+      </select>
+      <textarea id="bug-report" rows="10" cols="50"></textarea>
+      <button id="next-case">Следующий кейс</button>
+    </div>
+  </div>
+  <div id="results-container" style="display: none;">
+    <h2>Результаты</h2>
+    <div id="results"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
